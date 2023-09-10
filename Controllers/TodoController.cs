@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TodoAPI.Service;
 using TodoAPI.Models;
+using TodoAPI.DB.Entities;
 
 namespace TodoAPI.Controllers
 {
@@ -26,7 +27,7 @@ namespace TodoAPI.Controllers
         [HttpGet("{id}")]
         public ActionResult FindOne(int id)
         {
-            return Ok(_todoService.FindOne(id));
+            return Ok(_todoService.FindById(id));
         }
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)

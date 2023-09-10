@@ -1,16 +1,16 @@
 ﻿namespace TodoAPI.Models
 {
-    public class Todo
+    public class TodoDTO
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string Content { get; set; } = null!;
         public bool IsComplete { get; set; }
-        public Todo()
+        public TodoDTO()
         {
 
         }
-        public Todo(int id, string name, string content, bool isComplete)
+        public TodoDTO(int id, string name, string content, bool isComplete)
         {
             Id = id;
             Name = name;
